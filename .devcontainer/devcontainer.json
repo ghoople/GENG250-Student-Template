@@ -1,0 +1,28 @@
+{
+    "name": "GENG250 Python Environment",
+    "image": "mcr.microsoft.com/devcontainers/python:3.13",
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "3.13"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.datawrangler",
+                "mechatroner.rainbow-csv"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
+                "jupyter.themeMatplotlibPlots": true
+            }
+        }
+    },
+    "postCreateCommand": "pip install -r requirements.txt",
+    "forwardPorts": [],
+    "remoteUser": "vscode"
+}
